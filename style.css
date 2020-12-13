@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#lock {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+}
+
+#countdown {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    margin-top: -2vw;
+}
+
+.numberHolder {
+    width: 20vw;
+    height: 18vw;
+    position: relative;
+}
+
+.textunder {
+    position: absolute;
+    bottom: 0;
+    width: 20vw;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.bignumber {
+    font-size: 14vw;
+    text-align: center;
+    width: 20vw;
+    margin-top: -1vw;
+    font-weight: bolder;
+    background-size: cover;
+}
+
+#b1 {
+    color: #D40000;
+    background: linear-gradient(to bottom right, #D40000, #D40066);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#b2 {
+    color: #FFC700;
+    background: linear-gradient(to bottom right, #FFC700, #D95B00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#b3 {
+    color: #04BB00;
+    background: linear-gradient(to bottom right, #04BB00, #00ADD3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#b4 {
+    color: #0019FA;
+    background: linear-gradient(to bottom right, #0019FA, #F500FA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

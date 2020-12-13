@@ -79,3 +79,42 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+@media only screen and (max-width: 700px){
+    #countdown {
+        width: 90vw;
+        height: fit-content;
+        margin-top: 50px;
+        display: block;
+    }
+    #lock {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        opacity: 0.5;
+    }
+    .numberHolder {
+        width: 90vw;
+        height: 20vh;
+        position: relative;
+    }
+    .textunder {
+        position: absolute;
+        bottom: 0;
+        width: 90vw;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;;
+    }
+    
+    .bignumber {
+        font-size: 14vh;
+        text-align: center;
+        width: 90vw;
+        margin-top: -1vw;
+        font-weight: bolder;
+        background-size: cover;
+    }
+  }

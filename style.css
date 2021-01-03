@@ -14,7 +14,7 @@ body {
     opacity: 0.5;
 }
 
-#countdown {
+#countdown, #finalScreen {
     width: fit-content;
     height: fit-content;
     position: absolute;
@@ -22,6 +22,60 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    margin-top: -2vw;
+}
+
+#lock.openLock {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {transform: translate(-50%, -50%) scale(1);}
+    50% {transform: translate(-50%, -50%) scale(1.1);}
+    100% {transform: translate(-50%, -50%) scale(1);}
+}
+
+#teamo {
+    font-size: xxx-large;
+}
+
+#finalScreen {
+    display: none;
+    text-align: center;
+    transition-duration: 1s;
+}
+
+#showAll {
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 100px;
+    color: dimgray;
+    border-color: dimgray;
+    border-style: solid;
+    border-width: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+#showAll:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#celebration {
+    width: 20vw;
+    height: 18vw;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     margin-top: -2vw;
 }
 
@@ -80,6 +134,140 @@ body {
     background-clip: text;
 }
 
+#bf, #teamo {
+    color: #0019FA;
+    background: linear-gradient(127deg, #00f5b6, #f300f5, #f5af00, #f53800, #545fff, #14d500);
+    background-size: 1200% 1200%;
+    -webkit-animation: AnimationName 59s ease infinite;
+    -moz-animation: AnimationName 59s ease infinite;
+    animation: AnimationName 59s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#lock.fadeout {
+    transition-duration: 0.5s;
+    opacity: 0;
+}
+
+.fadeout {
+    transition-duration: 0.7s;
+    opacity: 0;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    overflow: hidden;
+    transition-duration: 2s;
+}
+
+.photos {
+    width: 20vw;
+    height: 20vw;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -5;
+    animation-name: fotos;
+    animation-duration: 10s;
+    opacity: 1;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    filter: contrast(0.5) brightness(1.5) blur(2px);
+}
+
+.photos:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fotos {
+    0% {opacity: 0; filter: contrast(1) brightness(1);}
+    15% {opacity: 1; filter: contrast(1) brightness(1);}
+    25% {opacity: 1; filter: contrast(1) brightness(1) blur(0px)}
+    100% {opacity: 1; filter: contrast(0.5) brightness(1.5) blur(2px)}
+}
+    
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 4%}
+    50%{background-position:100% 97%}
+    100%{background-position:0% 4%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 4%}
+    50%{background-position:100% 97%}
+    100%{background-position:0% 4%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 4%}
+    50%{background-position:100% 97%}
+    100%{background-position:0% 4%}
+}
+
+#bfu, #bf {
+    transition-duration: 0.3s;
+}
+
+#showAllScreen {
+    text-align: center;
+    display: none;
+    color: dimgray;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#row {
+    width: 90vw;
+    margin-left: 3.8vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.colimg {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.3s;
+    border-radius: 4px;
+}
+
+.colimg:hover {
+    filter: brightness(1.2);
+}
+
+.col {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+#message {
+    max-width: 80vw;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .col {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
 @media only screen and (max-width: 700px){
     #countdown {
         width: 90vw;
@@ -116,5 +304,21 @@ body {
         margin-top: -1vw;
         font-weight: bolder;
         background-size: cover;
+    }
+
+    #celebration {
+        width: 90vw;
+        height: 20vw;
+        position: relative;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: -12vw;
+    }
+
+    .photos {
+        width: 20vh;
+        height: 20vh;
     }
   }

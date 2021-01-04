@@ -7,7 +7,7 @@
     o que acontece no final antes da data. Até lá é só torcer pra
     não dar nenhum problema que me faça perder o código. É isto. */
 
-const dataDoNiver = new Date(2020, 0, 4); // TODO: fix the date
+const dataDoNiver = new Date(2021, 0, 4); // TODO: fix the date
 
 // Numbers
 

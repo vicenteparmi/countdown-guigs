@@ -1,19 +1,23 @@
 <!doctype html> <!-- Página criada por Vicente Parmigiani em 12/12/2020 às 19h-->
 <html lang="pt">
+    <!-- Morado é muito curioso mds, não é pra ficar fuçando nessas coisas. Só aperta no cadeado quando abrir e é isso. A melhor experiência é desse jeito. -->
 	<head>
 		<title>Surpresa pro morado</title>
-		<link rel="icon" type="image/png" href="?" />
+		<link rel="icon" type="image/png" href="heart.png" />
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="magic.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Página pra celebrar o niver do mozinho.">
-    <script type="text/javascript" src="script.js"></script>
-	</head>
+        <meta name="description" content="Página pra celebrar o niver do mozinho.">
+        <script src="confetti.js"></script>
+        <script type="text/javascript" src="photos.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
 	<body>
-        <img src="lock.svg" alt="cadeado" id="lock"/>
+        <img src="lock.svg" alt="cadeado" id="lock"/> 
+        <img src="https://cutt.ly/GjpYbvU" alt="Imagens que ficaram de fora" style="display: none;"></img>
         <div id="countdown">
             <div class="numberHolder">
                 <div class="bignumber" id="b1"></div>
@@ -33,6 +37,30 @@
             </div>
         </div>
         <div id="celebration">
-
+            <div id="finalnumber" style="display: none;">
+                <div class="bignumber" id="bf">20</div>
+                <div class="textunder magictime spaceInDown" id="bfu">aninhos do mozin</div>
+            </div>
         </div>
+        <div id="background">
+        </div>
+        <div id="finalScreen">
+            <h1 id="teamo">Te amo morado</h1>
+            <p id="message"></p>
+            <div id="showAll" onclick="showAll()">Mostrar tudo organizado</div>
+        </div>
+        <div id="showAllScreen">
+            <h1 style="margin-top: 50px;">Feliz aniversário morado!</h1>
+            <p>Aproveita pra colocar nossa playlist pra tocar enquanto vê as fotinhas rs</p>
+            <p style="margin: 5px; font-size: 8pt;">(Abre no spotify que é melhor, confia)</p>
+            <iframe src="https://open.spotify.com/embed/playlist/66IvhTjE6WYSvOpcygyZJa" max-width="500px" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div id="row">
+            </div>
+            <p>
+                Queria ter feito algo um pouco mais inesperado mas acho que ficou legalzinho assim. Enfim, amo vc ok?<br/>
+                Me lembra de te mandar o álbum do Google Photos tbm ok?
+            </p>
+            <!-- Se chegou aqui já deve ter olhado todo o código... -->
+        </div>
+        
 	</body>

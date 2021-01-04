@@ -252,7 +252,9 @@ body {
     max-width: 80vw;
 }
 
+
 /* Responsive layout - makes a two column-layout instead of four columns */
+/* 68747470733a2f2f796f7574752e62652f516353395a6e6445724863 */
 @media screen and (max-width: 800px) {
     .col {
       flex: 50%;
